@@ -1,7 +1,6 @@
 package org.jderobot.androidopencvdemo;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -259,10 +258,10 @@ public class Filters {
         }
         if(filternumber==11){
         	
-      	  InputStream is = context.getResources().openRawResource(R.raw.lbpcascade_frontalface);
+      	  InputStream is = context.getResources().openRawResource(R.raw.haarcascade_frontalface_alt);
       	  InputStream is2 = context.getResources().openRawResource(R.raw.haarcascade_eye);
             File cascadeDir = context.getDir("cascade", Context.MODE_PRIVATE);
-            File mCascadeFile = new File(cascadeDir, "lbpcascade_frontalface.xml");
+            File mCascadeFile = new File(cascadeDir, "haarcascade_frontalface_alt.xml");
             File mCascadeFile2 = new File(cascadeDir, "haarcascade_eye.xml");
             FileOutputStream os = new FileOutputStream(mCascadeFile);
             FileOutputStream os2 = new FileOutputStream(mCascadeFile2);
